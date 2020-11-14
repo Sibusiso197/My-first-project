@@ -1,0 +1,108 @@
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(25, 90, 151);
+    margin: 5px;
+    transition:all 0.5s ease;
+}
+
+@keyframes navLinksFade{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(45deg) translate(5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(-45deg) translate(5px,-6px);
+}
+
+
+@media screen and (max-width:760px){
+    body{
+        overflow-x: hidden;
+    }
+}
+@media screen and (max-width:600px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-Links {
+        position: absolute;
+        right: 0px;
+        height: 89vh;
+        top: 11vh;
+        background-color: rgb(25, 90, 151);
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    nav a{
+        color: rgb(255, 255, 255) !important;
+    }
+    .nav-Links li{
+        opacity: 0;  
+    }
+    .burger{
+        display: block;
+        margin-right: 20px;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+     .title,.par ,span{
+        display: none;
+    }
+    .sS{
+        top: 50%;
+        left:50%;
+        position: absolute;
+        transform: translate(-50%,-50%) ;
+        color:rgb(25, 90, 151);
+        font-size: 35px;
+        display: block;
+    }
+    .s1{
+        flex-direction: column;
+        overflow-x: hidden;
+        
+    }
+    
+    .content {
+        visibility: hidden;
+    }
+    .content .btn{
+       /* transform: translateY(-100%); */
+        position: absolute;
+    }
+    .s1-title{
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        transform: translate(-10%,-20%);
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+    }
+    .img-div{
+        top: -100%;
+        left: 0;
+        position: absolute;
+
+    }
+}
